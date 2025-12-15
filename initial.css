@@ -1,0 +1,61 @@
+.init-cont {
+    background-image: url("https://www.symplr.com/wp-content/uploads/2025/01/Operations-should-be-symplr.png"); /* Add your background image URL here */
+    background-size: cover;        /* makes the image fill the area */
+    background-position: center;   /* keeps the image centered */
+    background-repeat: no-repeat;  /* prevents tiling */
+    padding: 80px;
+    margin: 2%;
+    text-align: center;
+}
+
+
+h1 {
+    margin-top: 20px;
+    font-size: 350%;
+    font-weight: bold;
+    color: #931e1e;
+}
+
+.library-image {
+    width: 400px;
+    height: auto;
+    display: block;
+    margin: 20px auto;   /* centers the image */
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;   /* center under image */
+    gap: 60px;                 /* space between admin & user */
+    margin-top: 30px;
+}
+
+
+.admin-login img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+.user-login img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.img-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.img-btn img {
+    transition: transform 0.2s;
+}
+
+.img-btn img:hover {
+    transform: scale(1.05);   /* fixed your hover effect */
+}
