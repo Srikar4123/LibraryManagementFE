@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.init-cont {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1587838531021-fe7cb549905d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDZ8fHxlbnwwfHx8fHw%3D') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Main Container Box */
+.main-container-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    padding: 60px 50px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Library Icon Section */
+.library-section {
+    margin-bottom: 60px;
+}
+
+.library-icon-wrapper {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+}
+
+.library-icon {
+    width: 80px;
+    height: 80px;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2d3748;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #4a5568;
+    margin-bottom: 20px;
+}
+
+/* Icon Buttons Container */
+.icon-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+/* Icon Button Wrapper */
+.icon-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icon Buttons */
+.icon-button {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+.icon-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.icon-button:hover::before {
+    opacity: 1;
+}
+
+.icon-button:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.icon-button:active {
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* User Button */
+.user-button {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.user-button:hover {
+    box-shadow: 0 20px 50px rgba(79, 172, 254, 0.4);
+}
+
+/* Admin Button */
+.admin-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.admin-button:hover {
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+}
+
+/* Button Icons */
+.button-icon {
+    width: 50px;
+    height: 50px;
+    color: white;
+    z-index: 1;
+    position: relative;
+}
+
+/* Button Labels */
+.button-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    transition: all 0.3s ease;
+}
+
+.icon-button-wrapper:hover .button-label {
+    color: #4a5568;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .init-cont {
+        padding: 30px 15px;
+    }
+
+    .main-container-box {
+        padding: 50px 30px;
+        border-radius: 20px;
+    }
+
+    .library-section {
+        margin-bottom: 50px;
+    }
+
+    .library-icon-wrapper {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .library-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .icon-buttons-container {
+        gap: 60px;
+        margin-top: 30px;
+    }
+
+    .icon-button {
+        width: 100px;
+        height: 100px;
+        border-radius: 20px;
+    }
+
+    .button-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .button-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container-box {
+        padding: 40px 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .icon-buttons-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .icon-button {
+        width: 90px;
+        height: 90px;
+        border-radius: 18px;
+    }
+
+    .button-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .button-label {
+        font-size: 0.95rem;
+    }
+}
